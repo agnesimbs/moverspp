@@ -1,0 +1,16 @@
+from django.urls import path
+from  .views import *
+urlpatterns=[
+path('',HomePageView.as_view(),name='home'),
+path('about/',AboutPageView.as_view(),name='about'),
+path('category/',CategoryView.as_view(),name='category'),
+path('audio/',AudioView.as_view(),name='audio'),
+path('gallery/',GalleryView.as_view(),name='gallery'),
+path('standard/',StandardView.as_view(),name='standard'),
+path('video/',VideoView.as_view(),name='video'),
+path('guide/',GuideView.as_view(),name='guide'),
+path('contact/',ContactView.as_view(),name='contact'),
+
+
+
+]
