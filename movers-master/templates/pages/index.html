@@ -40,7 +40,7 @@
     
 
 
-<h1>homepage</h1>
+
 
     <!-- pageheader
     ================================================== -->
@@ -49,11 +49,11 @@
         <header class="header">
             <div class="header__content row">
 
-                <div class="header__logo">
+                <!--<div class="header__logo">
                     <a class="logo" href="{%url 'home' %}">
                         <img src=" {% static 'images/logo.svg'%}" alt="Homepage">
                     </a>
-                </div> <!-- end header__logo -->
+                </div> <! end header__logo -->
 
                 <ul class="header__social">
                     <li>
@@ -94,7 +94,7 @@
                     <h2 class="header__nav-heading h6">Site Navigation</h2>
 
                     <ul class="header__nav">
-                        <li class="current"><a href="index.html" title="">Home</a></li>
+                        <li class="current"><a href="/" title="">Home</a></li>
                         <li class="has-children">
                             <a href="#0" title="">Categories</a>
                             <ul class="sub-menu">
@@ -118,6 +118,8 @@
                         <li><a href="{% url 'guide' %}" title="">Styles</a></li>
                         <li><a href="{% url 'about' %}" title="">About</a></li>
                         <li><a href="{% url 'contact' %}" title="">Contact</a></li>
+                        <li><a href="{% url 'login' %}" title="">Login</a></li>
+                        <li><a href="{% url 'signup' %}" title="">Sign Up</a></li>
                     </ul> <!-- end header__nav -->
 
                     <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
@@ -134,23 +136,23 @@
                 <div class="featured">
 
                     <div class="featured__column featured__column--big">
-                        <div class="entry" style="background-image:url('images/thumbs/featured/featured-guitarman.jpg');">
+                        <div class="entry" style="background-image:url('{% static 'images/thumbs/featured/images.png' %}');">
                             
                             <div class="entry__content">
-                                <span class="entry__category"><a href="#0">Music</a></span>
+                                <span class="entry__category"><a href="#0">Movers</a></span>
 
-                                <h1><a href="#0" title="">What Your Music Preference Says About You and Your Personality.</a></h1>
+                                <h1><a href="#0" title="">You deserve the best <a></h1>
 
-                                <div class="entry__info">
+                                <!--<div class="entry__info">
                                     <a href="#0" class="entry__profile-pic">
                                         <img class="avatar" src="{% static 'images/avatars/user-03.jpg' %}" alt="">
                                     </a>
 
-                                    <ul class="entry__meta">
+                                    <!-<ul class="entry__meta">
                                         <li><a href="#0">John Doe</a></li>
                                         <li>December 29, 2017</li>
-                                    </ul>
-                                </div>
+                                    </ul>-
+                                </div> -->
                             </div> <!-- end entry__content -->
                             
                         </div> <!-- end entry -->
@@ -158,14 +160,14 @@
 
                     <div class="featured__column featured__column--small">
 
-                        <div class="entry" style="background-image:url('images/thumbs/featured/featured-watch.jpg');">
+                        <div class="entry" style="background-image:url('{% static 'images/thumbs/featured/featured-watch.jpg' %}');">
                             
                             <div class="entry__content">
                                 <span class="entry__category"><a href="#0">Management</a></span>
 
-                                <h1><a href="#0" title="">The Pomodoro Technique Really Works.</a></h1>
+                                <h1><a href="#0" title="">Save on your time which will save your money</a></h1>
 
-                                <div class="entry__info">
+                                <!--<div class="entry__info">
                                     <a href="#0" class="entry__profile-pic">
                                         <img class="avatar" src="{%static 'images/avatars/user-03.jpg' %}" alt="">
                                     </a>
@@ -174,28 +176,28 @@
                                         <li><a href="#0">John Doe</a></li>
                                         <li>December 27, 2017</li>
                                     </ul>
-                                </div>
+                                </div>-->
                             </div> <!-- end entry__content -->
                           
                         </div> <!-- end entry -->
 
-                        <div class="entry" style="background-image:url('images/thumbs/featured/featured-beetle.jpg');">
+                        <div class="entry" style="background-image:url('{% static 'images/thumbs/featured/featured-beetle.jpg' %}');">
 
                             <div class="entry__content">
-                                <span class="entry__category"><a href="#0">LifeStyle</a></span>
+                                <span class="entry__category"><a href="#0">Ready</a></span>
 
-                                <h1><a href="#0" title="">Throwback To The Good Old Days.</a></h1>
+                                <h1><a href="#0" title="">Get moving</a></h1>
 
-                                <div class="entry__info">
-                                    <!--<a href="#0" class="entry__profile-pic">
+                                <!--<div class="entry__info">
+                                    <!-<a href="#0" class="entry__profile-pic">
                                         <img class="avatar" src="{% static 'images/avatars/user-03.jpg' %}" alt="">
-                                    </a>-->
+                                    </a>-
 
                                     <ul class="entry__meta">
                                         <li><a href="#0">John Doe</a></li>
                                         <li>December 21, 2017</li>
                                     </ul>
-                                </div>
+                                </div> -->
                             </div> <!-- end entry__content -->
 
                         </div> <!-- end entry -->
@@ -223,7 +225,7 @@
                     <div class="entry__thumb">
                         <a href="{% url 'standard' %}" class="entry__thumb-link">
                             <img src="{% static 'images/thumbs/masonry/lamp-400.jpg'%}" 
-                                    srcset="{% static 'images/thumbs/masonry/lamp-400.jpg 1x, images/thumbs/masonry/lamp-800.jpg 2x'%}" alt="">
+                                    srcset="{% static 'images/thumbs/masonry/lamp-400.jpg 1x' %}, {% static 'images/thumbs/masonry/lamp-800.jpg 2x' %}" alt="">
                         </a>
                     </div>
     
@@ -648,10 +650,26 @@
     <!-- s-footer
     ================================================== -->
     <footer class="s-footer">
+    <div class="s-footer__bottom">
+            <div class="row">
+                <div class="col-full">
+                    <div class="s-footer__copyright">
+                        <span style="align-self: center;">© Copyright Packers and Movers Facilitation 2018</span> 
+                        <span>All Rights Reserved</span>
+                    </div>
+
+                    <div class="go-top">
+                        <a class="smoothscroll" title="Back to Top" href="#top"></a>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end s-footer__bottom -->
+
 
      
 
     </footer> <!-- end s-footer -->
+
 
 
     <!-- preloader

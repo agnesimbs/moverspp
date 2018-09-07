@@ -10,7 +10,8 @@ path('standard/',StandardView.as_view(),name='standard'),
 path('video/',VideoView.as_view(),name='video'),
 path('guide/',GuideView.as_view(),name='guide'),
 path('contact/',ContactView.as_view(),name='contact'),
-
+path('login/',LoginView.as_view(),name='login'),
+path('signup/',SignUpView.as_view(),name='signup'),
 
 
 ]

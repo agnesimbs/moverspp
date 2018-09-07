@@ -1,5 +1,5 @@
 {% extends "pages/base.html" %}
-{% load staticfiles %}
+{% load static %}
 
 <!--<!DOCTYPE html>
 <html class="no-js" lang="en">-->
@@ -7,9 +7,9 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    {% block title %}
+    <!--{% block title %}
     About - Philosophy
-    {% endblock %}
+    {% endblock %}-->
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -48,11 +48,11 @@
         <header class="header">
             <div class="header__content row">
 
-                <div class="header__logo">
+                <!--<div class="header__logo">
                     <a class="logo" href="index.html">
-                        <img src="{% static 'images/logo.svg' %}" alt="Homepage">
+                        <img src="{% static 'images/logo.svg' %}" alt="Homepage"/>
                     </a>
-                </div> <!-- end header__logo -->
+                </div> <!end header__logo --> 
 
                 <ul class="header__social">
                     <li>
@@ -143,10 +143,10 @@
 
             <div class="s-content__media col-full">
                 <div class="s-content__post-thumb">
-                    <img src="{% static 'images/thumbs/about/about-1000.jpg' %}" 
-                         srcset="{% static 'images/thumbs/about/about-2000.jpg 2000w' %}, 
-                                 {% static 'images/thumbs/about/about-1000.jpg 1000w' %}, 
-                                 {% static 'images/thumbs/about/about-500.jpg 500w' %}" 
+                    <img src="{% static 'images/thumbs/about/about-1000.jpg' %}"
+                         srcset="{% static 'images/thumbs/about/about-2000.jpg' %}, 
+                                 {% static 'images/thumbs/about/about-1000.jpg' %}, 
+                                 {% static 'images/thumbs/about/about-500.jpg' %}" 
                          sizes="(max-width: 2000px) 100vw, 2000px" alt="" >
                 </div>
             </div> <!-- end s-content__media -->
@@ -254,7 +254,7 @@
                     </article>
                     <article class="col-block popular__post">
                         <a href="#0" class="popular__thumb">
-                            <img src="{% static 'images/thumbs/small/salad-150.jpg"' %} alt="">
+                            <img src="{% static 'images/thumbs/small/salad-150.jpg' %}" alt="">
                         </a>
                         <h5><a href="#0">Healthy Mediterranean Salad Recipes</a></h5>
                         <section class="popular__meta">
@@ -392,7 +392,7 @@
             <div class="row">
                 <div class="col-full">
                     <div class="s-footer__copyright">
-                        <span>© Copyright Philosophy 2018</span> 
+                        <span>© Copyright Philosoph 2018</span> 
                         <span>Site Template by <a href="https://colorlib.com/">Colorlib</a></span>
                     </div>
 
@@ -408,7 +408,7 @@
 
     <!-- preloader
     ================================================== -->
-    <div id="preloader">
+ <!--    <div id="preloader">
         <div id="loader">
             <div class="line-scale">
                 <div></div>
@@ -418,7 +418,7 @@
                 <div></div>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
     <!-- Java Script

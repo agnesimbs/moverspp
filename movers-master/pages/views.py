@@ -22,9 +22,6 @@ class ContactView(TemplateView):
 	template_name='pages/contact.html'
 
 
-
-
-
 class AudioView(TemplateView):
 
 	template_name='pages/single-audio.html'
@@ -37,7 +34,7 @@ class GalleryView(TemplateView):
 
 class StandardView(TemplateView):
 
-	template_name='pages/single-standard.html'
+	template_name='pages/standard.html'
 
 class VideoView(TemplateView):
 
@@ -45,3 +42,10 @@ class VideoView(TemplateView):
 class GuideView(TemplateView):
 
 	template_name='pages/style-guide.html'
+class LoginView(TemplateView):
+	template_name='pages/login.html'
+
+class SignUpView(TemplateView):
+	
+
+	template_name='pages/signup.html'
