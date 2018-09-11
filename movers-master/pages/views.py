@@ -4,6 +4,16 @@ from django.views.generic import TemplateView
 # Create your views here.
 #def homePageView(request):
 #	return HttpResponse("Hello Agnes")
+
+
+
+
+#def payment_form(request):
+
+ #   context = { "stripe_key": settings.STRIPE_PUBLIC_KEY }
+  #  return render(request, "yourtemplate.html", context)
+
+
 class HomePageView(TemplateView):
 
 	template_name='pages/index.html'
@@ -49,3 +59,5 @@ class SignUpView(TemplateView):
 	
 
 	template_name='pages/signup.html'
+class MappingView(TemplateView):
+	template_name='pages/mapping.html'
