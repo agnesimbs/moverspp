@@ -94,6 +94,7 @@
 
                     <ul class="header__nav">
                         <li><a href="{% url 'home' %}" title="">Home</a></li>
+                        <!--
                         <li class="has-children">
                             <a href="#0" title="">Categories</a>
                             <ul class="sub-menu">
@@ -113,10 +114,10 @@
                             <li><a href="{% url 'gallery' %}">Gallery Post</a></li>
                             <li><a href="{% url 'standard' %}">Standard Post</a></li>
                             </ul>
-                        </li>
-                        <li><a href="{% url 'guide' %}" title="">Styles</a></li>
+                        </li>-->
+                        <!--<li><a href="{% url 'guide' %}" title="">Styles</a></li>-->
                         <li class="current"><a href="{% url 'about' %}" title="">About</a></li>
-                        <li><a href="{% url 'contact' %}" title="">Contact</a></li>
+                        <!--<li><a href="{% url 'contact' %}" title="">Contact</a></li>-->
                     </ul> <!-- end header__nav -->
 
                     <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
@@ -131,36 +132,136 @@
 
     <!-- s-content
     ================================================== -->
-    <section class="s-content s-content--narrow">
-    <div class="row">
-    <div class="col-sm-3"></div>
-    <div class="col-sm-3">
-        <form action="/loginhandler/" method="POST" role="form" >
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text"  autocomplete="off" name="username" class="form-control">
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Book your move online :: </title>
+<!-- Meta tag Keywords -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="online Booking Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Meta tag Keywords -->
+
+<!-- css files -->
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all">
+<link href="{% static 'css/wickedpicker.css' %}" rel="stylesheet" type='text/css' media="all" />
+<link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}" />
+<!-- //css files -->
+
+<!-- online-fonts -->
+<link href="//fonts.googleapis.com/css?family=Amaranth:400,400i,700,700i" rel="stylesheet">
+<!--//online-fonts -->
+</head>
+<body>
+<div class="header">
+    <h2>Book your move online</h2>
+</div>
+
+<div class="w3-main">
+    <!-- Main -->
+    <div class="about-bottom">
+        <div class="w3l_about_bottom_right two">
+            <h2 class="tittle"><img src="images/cab.png" alt=""><span>Book your move online</span></h2>
+            <div class="book-form">
+
+                <form action="/bookinghandler/" method="POST">
+                    <div class="form-date-w3-agileits">
+                        <div class="form-agileits">
+                            <label> Name :</label>
+                        </div>
+                        <div class="form-agileits-2">
+                            <input type="text" name="name" placeholder="Your Name" required="">
+                        </div>
+                        <div class="clear"> </div>
+                    </div>
+                    <div class="form-date-w3-agileits second-agile">
+                        <div class="form-agileits">
+                            <label> Phone Number :</label>
+                        </div>
+                        <div class="form-agileits-2">
+                            <input type="text" name="phone" placeholder="Your Phone Number" required="">
+                        </div>
+                        <div class="clear"> </div>
+                    </div>
+                    <div class="form-date-w3-agileits">
+                        <div class="form-agileits">
+                            <label> Pickup Location :</label>
+                        </div>
+                        <div class="form-agileits-2">
+                            <input type="text" name="pickup" placeholder="Enter an origin location" required="">
+                        </div>
+                        <div class="clear"> </div>
+                    </div>
+                    <div class="form-date-w3-agileits">
+                        <div class="form-agileits">
+                            <label> Drop Location :</label>
+                        </div>
+                        <div class="form-agileits-2">
+                            <input type="text" name="drop" placeholder="Enter a destination location" required="">
+                        </div>
+                        <div class="clear"> </div>
+                    </div>
+                    <div class="form-date-w3-agileits">
+                        <div class="form-agileits">
+                            <label>Pickup Date :</label>
+                        </div>
+                        <div class="form-agileits-2">
+                            <input  id="datepicker" name="date" type="text" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
+                        </div>  
+                        <div class="clear"> </div>                      
+                    </div>
+                    <div class="form-date-w3-agileits">
+                        <div class="form-agileits">
+                            <label>Pickup Time :</label>
+                        </div>
+                        <div class="form-agileits-2">
+                            <input type="text" id="timepicker" name="time" class="timepicker form-control" value="Hrs:Min"> 
+                        </div>
+                        <div class="clear"> </div>
+                    </div>
+                    <div class="make">
+                          <input type="submit" value="Book ">
+                    </div>
+                </form>
             </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password"  autocomplete="off" name="password" class="form-control">
-            </div>
-            <div class="form-group">
-                
-                <input type="submit"  value="Login" class="btn-primary form-control">
-            </div>
-        </form>
+        </div>
+        <div class="clear"> </div>
     </div>
-    <div class="col-sm-3"></div>
-    </div>
+</div>
+<!-- //Main -->
+
+<!-- footer -->
+<div class="footer-w3l">
+    <p> Book it yourself .save 45% on your moving costs</p>
+</div>
+<!-- //footer -->
+
+    <!-- js-scripts-->
+        <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
         
-
-    </section> 
-
-
-
-
-<!-- s-content -->
-
+        <!-- Time -->
+        <script type="text/javascript" src="js/wickedpicker.js"></script>
+            <script type="text/javascript">
+                $('.timepicker').wickedpicker({twentyFour: false});
+            </script>
+        <!-- //Time -->
+        
+            <!-- Calendar -->
+                <script src="js/jquery-ui.js"></script>
+                  <script>
+                          $(function() {
+                            $( "#datepicker,#datepicker1,#datepicker2,#datepicker3" ).datepicker();
+                          });
+                  </script>
+            <!-- //Calendar -->
+    <!-- //js-scripts-->
+    
+</body>
+</html>
 
     <!-- s-extra
     ================================================== -->
@@ -219,7 +320,7 @@
 
                 </div> <!-- end s-footer__social -->
 
-                <div class="col-five md-full end s-footer__subscribe">
+                <!--<div class="col-five md-full end s-footer__subscribe">
                         
                     <h4>Our Newsletter</h4>
 
@@ -247,7 +348,7 @@
                 <div class="col-full">
                     <div class="s-footer__copyright">
                         <span>© Copyright Philosoph 2018</span> 
-                        <span>Site Template by <a href="https://colorlib.com/">Colorlib</a></span>
+                        <!--<span>Site Template by <a href="https://colorlib.com/">Colorlib</a></span>-->
                     </div>
 
                     <div class="go-top">
